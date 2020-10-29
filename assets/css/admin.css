@@ -1,0 +1,113 @@
+header {
+  background:#FF7A62;
+}
+
+.logo-text::before {
+  background: #FF7A62;
+}
+
+.logo-text::after {
+  background: #FF7A62;
+}
+
+.nav {
+  height: 66px;
+}
+
+.admin-wrapper {
+  background: white;
+  display: flex;
+  width: 100%;
+  height: calc(100% - 66px);
+}
+
+.admin-wrapper .left-sidebar {
+  flex: 2;
+  height: 100%;
+  background: #99f1ff;
+}
+
+.admin-wrapper .left-sidebar ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.admin-wrapper .left-sidebar ul li a {
+  padding: 18px;
+  display: block;
+  border-bottom: 1px solid #33e4ff;
+  color: #00424d;
+  transition: 0.3s;
+}
+
+.admin-wrapper .left-sidebar ul li a:hover {
+  background: #33e4ff;
+  transition: 0.3s;
+}
+
+.admin-wrapper .admin-content {
+  flex: 8;
+  height: 100%;
+  padding: 40px 100px 100px;
+  overflow-y: scroll;
+}
+
+.btn {
+  color:	white;
+}
+
+.btn-big {
+  background: #FF7A62;
+}
+
+.btn:hover {
+  color: #00424d !important;
+  background: #33e4ff;
+  border: 1px solid #33e4ff;
+  transition: all 0.3s; 
+}
+
+.admin-content .page-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+}
+
+th,td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.edit {
+  color: rgba(0, 184, 0, 0.904);
+}
+
+.delete {
+  color: red;
+}
+
+.publish {
+  color: rgb(0, 110, 255);
+}
+
+.edit:hover,
+.delete:hover,
+.publish:hover {
+  text-decoration: underline;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form div .btn {
+  float: right;
+}
