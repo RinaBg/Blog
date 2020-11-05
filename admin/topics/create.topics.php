@@ -1,4 +1,5 @@
 <?php include("../../path.php") ?>
+<?php include(ROOT_PATH . "/app/controllers/topics.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,15 +45,17 @@
       <div class="content">
 
         <h2 class="page-title">Create Topic</h2>
+        
+        <?php include(ROOT_PATH . "/app/helpers/formErrors.php")?>
 
-        <form action="create.posts.php" method="POST">
+        <form action="create.topics.php" method="POST">
             <div>
                 <label>Name</label>
-                <input type="text" name="title" class="text-input">
+                <input type="text" name="name" value = "<?php echo $name; ?>" class="text-input">
             </div>
             <div>
                 <label>Description</label>
-                <textarea name="body" id="body"></textarea>
+                <textarea name="description" id="body"><?php echo $description; ?></textarea>
                 <script>
                   ClassicEditor.create(document.querySelector("#body")).catch(
                     (error) => {
@@ -62,7 +65,7 @@
                 </script>
             </div>
             <div>
-                <button type="submit" class="btn btn-big">Update Topic</button>
+                <button type="submit" name="add-topic" class="btn btn-big">Add Topic</button>
             </div>
         </form>
         
