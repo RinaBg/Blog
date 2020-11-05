@@ -1,6 +1,6 @@
 <?php 
 include("path.php"); 
-include(ROOT_PATH . "/app/database/db.php");
+include(ROOT_PATH . "/app/controllers/topics.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -178,13 +178,10 @@ include(ROOT_PATH . "/app/database/db.php");
 
           <div class="section topics">
             <h2 class="section-title">Topics</h2>
-            <ul>
-              <li><a href="#">Poems</a></li>
-              <li><a href="#">Quotes</a></li>
-              <li><a href="#">Fiction</a></li>
-              <li><a href="#">Motivation</a></li>
-              <li><a href="#">Inspiraton</a></li>
-              <li><a href="#">Life Lessons</a></li>
+            <ul>              
+              <?php foreach ($topics as $key => $topic): ?>
+                <li><a href="#"><?php echo $topic['name']; ?></a></li>
+              <?php endforeach; ?>
             </ul>
 
           </div>
